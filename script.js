@@ -138,3 +138,28 @@ function makeHeart() {
         h.remove();
     }, 6000);
 }
+setInterval(() => {
+
+const heart = document.createElement("div");
+
+heart.innerHTML = "❤";
+
+heart.style.position = "fixed";
+heart.style.left = Math.random()*100 + "vw";
+heart.style.bottom = "-20px";
+heart.style.fontSize = (15 + Math.random()*20) + "px";
+
+heart.style.opacity = ".6";
+
+heart.style.pointerEvents = "none";
+
+heart.style.animation =
+"riseHeart 8s linear forwards";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+},600);
