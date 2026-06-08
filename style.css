@@ -462,11 +462,12 @@ opacity:0;
 
 position:fixed;
 
-left:40px;
-bottom:40px;
+left:70px;
+bottom:180px;
 
 width:180px;
-height:120px;
+
+z-index:-1;
 }
 
 .roof{
@@ -474,7 +475,7 @@ height:120px;
 width:180px;
 height:50px;
 
-background:#c62828;
+background:#C62828;
 
 clip-path:polygon(
 50% 0%,
@@ -486,9 +487,9 @@ clip-path:polygon(
 .body{
 
 width:180px;
-height:70px;
+height:90px;
 
-background:#e53935;
+background:#E53935;
 }
 /* =========================
    PAJAROS
@@ -601,44 +602,69 @@ linear-gradient(
 
 }
 .woodstock{
+
 position:fixed;
-left:210px;
-bottom:250px;
 
 font-size:40px;
 
-animation:flyBird 3s ease-in-out infinite;
+z-index:3;
 }
 
-@keyframes flyBird{
+.wood1{
+
+left:300px;
+bottom:320px;
+
+animation:fly1 4s ease-in-out infinite;
+}
+
+.wood2{
+
+left:350px;
+bottom:260px;
+
+animation:fly2 5s ease-in-out infinite;
+}
+
+@keyframes fly1{
 
 50%{
 transform:
 translateY(-15px)
-translateX(8px);
+translateX(10px);
+}
 }
 
+@keyframes fly2{
+
+50%{
+transform:
+translateY(-20px)
+translateX(-10px);
+}
 }
 .snoopy{
+
 position:fixed;
-left:95px;
-bottom:165px;
+
+left:105px;
+bottom:280px;
 
 font-size:90px;
 
 animation:floatDog 4s ease-in-out infinite;
 
-z-index:2;
+z-index:3;
 }
 
 @keyframes floatDog{
 
 50%{
-transform:translateY(-10px);
+transform:translateY(-8px);
 }
-
 }
 .ground{
+
 position:fixed;
 
 left:0;
@@ -654,5 +680,89 @@ linear-gradient(
 #4CAF50
 );
 
-z-index:-2;
+z-index:-3;
+}
+.sun{
+position:fixed;
+top:50px;
+right:70px;
+
+width:100px;
+height:100px;
+
+border-radius:50%;
+
+background:#FFF59D;
+
+box-shadow:
+0 0 50px #FFF59D;
+
+animation:sunFloat 6s ease-in-out infinite;
+
+z-index:-1;
+}
+
+@keyframes sunFloat{
+50%{
+transform:translateY(-10px);
+}
+}
+   .tree{
+
+position:fixed;
+
+right:120px;
+bottom:120px;
+
+z-index:-1;
+}
+
+.tree-top{
+
+width:120px;
+height:120px;
+
+background:#4CAF50;
+
+border-radius:50%;
+}
+
+.tree-trunk{
+
+width:25px;
+height:80px;
+
+background:#795548;
+
+margin:auto;
+}
+   .charlie{
+
+position:fixed;
+
+left:320px;
+bottom:170px;
+
+font-size:90px;
+
+animation:charlieMove 5s ease-in-out infinite;
+
+z-index:3;
+}
+
+@keyframes charlieMove{
+
+50%{
+transform:translateY(-5px);
+}
+}
+   .romantic-mode .tree,
+.romantic-mode .house,
+.romantic-mode .snoopy,
+.romantic-mode .woodstock,
+.romantic-mode .charlie{
+
+opacity:0;
+
+transition:1s;
 }
