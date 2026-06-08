@@ -1,14 +1,23 @@
 const q = [
-["¿Cómo se llama el pajarito mejor amigo de Snoopy?",["Woodstock","Charlie","Joe Cool","Piper"],0],
-["¿De qué color es la casita de Snoopy?",["Roja","Azul","Amarilla","Verde"],0],
-["¿Quién es el dueño de Snoopy?",["Charlie Brown","Linus","Schroeder","Franklin"],0],
-["¿Qué identidad suele imaginar Snoopy cuando vuela sobre su casita?",["Piloto de la Primera Guerra Mundial","Astronauta","Detective","Capitán Pirata"],0],
-["¿Qué apodo usa Snoopy cuando se siente genial?",["Joe Cool","Captain Dog","Flying Ace","Cool Puppy"],0],
-["¿Qué instrumento toca Schroeder?",["Piano","Violín","Guitarra","Trompeta"],0],
-["¿Quién está enamorada de Schroeder?",["Lucy","Sally","Patty","Marcie"],0],
-["¿Cómo se llama la hermana de Charlie Brown?",["Sally","Lucy","Patty","Violet"],0],
-["¿Qué suele perseguir Snoopy?",["El Barón Rojo","Un gato negro","Woodstock","Charlie Brown"],0],
-["Además de jugar y dormir, ¿Cuál es el pasatiempo literario y artístico favorito de Snoopy?",["Viajar por el mundo","Escribir novelas","Escribir cuentos","Bailar"],1]
+["¿Cómo se llama el pajarito mejor amigo de Snoopy?",["Charlie","Woodstock","Joe Cool","Piper"],1],
+
+["¿De qué color es la casita de Snoopy?",["Azul","Roja","Amarilla","Verde"],1],
+
+["¿Quién es el dueño de Snoopy?",["Linus","Franklin","Charlie Brown","Schroeder"],2],
+
+["¿Qué identidad suele imaginar Snoopy cuando vuela sobre su casita?",["Astronauta","Piloto de la Primera Guerra Mundial","Detective","Capitán Pirata"],1],
+
+["¿Qué apodo usa Snoopy cuando se siente genial?",["Flying Ace","Joe Cool","Captain Dog","Cool Puppy"],1],
+
+["¿Qué instrumento toca Schroeder?",["Violín","Guitarra","Piano","Trompeta"],2],
+
+["¿Quién está enamorada de Schroeder?",["Marcie","Lucy","Patty","Sally"],1],
+
+["¿Cómo se llama la hermana de Charlie Brown?",["Lucy","Patty","Sally","Violet"],2],
+
+["¿Qué suele perseguir Snoopy?",["Woodstock","Charlie Brown","El Barón Rojo","Un gato negro"],2],
+
+["Además de jugar y dormir, ¿Cuál es el pasatiempo literario y artístico favorito de Snoopy?",["Viajar por el mundo","Bailar","Escribir novelas","Escribir cuentos"],2]
 ];
 
 let i = 0;
