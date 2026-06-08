@@ -89,9 +89,13 @@ document.getElementById("continue1").onclick = () => {
 };
 
 document.getElementById("continue2").onclick = () => {
+
+    romanticMode = true;
+
+    document.body.classList.add("romantic-mode");
+
     show("proposal");
 };
-
 document.getElementById("yesBtn").onclick = () => {
 
     show("letter");
@@ -147,7 +151,10 @@ function makeHeart() {
         h.remove();
     }, 6000);
 }
+let romanticMode = false;
 setInterval(() => {
+
+if(!romanticMode) return;
 
 const heart = document.createElement("div");
 
