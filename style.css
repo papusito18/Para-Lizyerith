@@ -1,0 +1,17 @@
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#FFF8F0,#FCE4EC);overflow-x:hidden}
+.screen{display:none;min-height:100vh;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:20px}
+.active{display:flex;animation:fade .7s}
+button{padding:12px 22px;border:none;border-radius:25px;cursor:pointer;background:#FFD6E0;font-size:1rem;transition:.3s}
+button:hover{transform:translateY(-3px)}
+.progress{width:90%;max-width:500px;height:15px;background:#eee;border-radius:20px}
+#progressBar{height:100%;width:0;background:#D6F5F3;border-radius:20px}
+#answers{display:grid;gap:10px;width:min(500px,90%)}
+.answer{background:white}
+.card{background:white;padding:30px;border-radius:20px;max-width:700px;box-shadow:0 10px 30px rgba(0,0,0,.15);white-space:pre-line}
+.chest-box{width:180px;height:120px;background:#c98b3b;border-radius:10px;position:relative;animation:float 2s infinite}
+.chest-box:before{content:'';position:absolute;top:-30px;left:0;width:180px;height:40px;background:#dca253;border-radius:20px 20px 0 0}
+.buttons{display:flex;gap:20px;flex-wrap:wrap}
+.heart{position:fixed;bottom:-20px;font-size:20px;animation:rise 6s linear forwards}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes rise{to{transform:translateY(-110vh);opacity:0}}
+@keyframes float{50%{transform:translateY(-8px)}}
