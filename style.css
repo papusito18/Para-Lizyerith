@@ -261,6 +261,22 @@ button:hover{
     inset:0;
     z-index:-2;
     overflow:hidden;
+   <div class="snoopy-scene">
+
+    <div class="house">
+        <div class="roof"></div>
+        <div class="body"></div>
+    </div>
+
+    <div class="snoopy">
+        🐶
+    </div>
+
+    <div class="woodstock">
+        🐥
+    </div>
+
+</div>
 }
 
 /* =========================
@@ -373,31 +389,31 @@ position:fixed;
 left:40px;
 bottom:40px;
 
-width:170px;
+width:180px;
 height:120px;
-
-opacity:.75;
-
-z-index:-1;
 }
+
 .roof{
 
-    width:120px;
-    height:35px;
+width:180px;
+height:50px;
 
-    background:#cc3f3f;
+background:#c62828;
 
-    border-radius:15px 15px 0 0;
+clip-path:polygon(
+50% 0%,
+100% 100%,
+0% 100%
+);
 }
 
 .body{
 
-    width:120px;
-    height:55px;
+width:180px;
+height:70px;
 
-    background:#d84f4f;
+background:#e53935;
 }
-
 /* =========================
    PAJAROS
 ========================= */
@@ -506,5 +522,43 @@ linear-gradient(
 #FFD6E0,
 #FCE4EC
 );
+
+}
+.woodstock{
+position:fixed;
+left:210px;
+bottom:250px;
+
+font-size:40px;
+
+animation:flyBird 3s ease-in-out infinite;
+}
+
+@keyframes flyBird{
+
+50%{
+transform:
+translateY(-15px)
+translateX(8px);
+}
+
+}
+.snoopy{
+position:fixed;
+left:95px;
+bottom:165px;
+
+font-size:90px;
+
+animation:floatDog 4s ease-in-out infinite;
+
+z-index:2;
+}
+
+@keyframes floatDog{
+
+50%{
+transform:translateY(-10px);
+}
 
 }
