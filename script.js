@@ -85,7 +85,41 @@ document.getElementById("chestBtn").onclick = () => {
 };
 
 document.getElementById("continue1").onclick = () => {
-    show("reveal");
+
+const chest =
+document.querySelector(".chest-box");
+
+chest.classList.add("open");
+
+for(let i=0;i<35;i++){
+
+setTimeout(()=>{
+
+const s =
+document.createElement("div");
+
+s.className="sparkle";
+
+s.style.left =
+(40 + Math.random()*20)+"vw";
+
+s.style.bottom="220px";
+
+document.body.appendChild(s);
+
+setTimeout(()=>{
+s.remove();
+},2000);
+
+},i*40);
+}
+
+setTimeout(()=>{
+
+show("reveal");
+
+},1800);
+
 };
 
 document.getElementById("continue2").onclick = () => {
