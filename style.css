@@ -1,217 +1,456 @@
+/* =========================
+   RESET
+========================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+/* =========================
+   BODY
+========================= */
 
 body{
-font-family:'Segoe UI',sans-serif;
-background:linear-gradient(
-180deg,
-#FFF8F0,
-#FCE4EC,
-#D6F5F3
-);
-overflow-x:hidden;
-min-height:100vh;
-position:relative;
-}
-.sky{
-position:fixed;
-inset:0;
-overflow:hidden;
-z-index:-2;
-}
-.moon{
-position:absolute;
-top:80px;
-right:100px;
+    font-family:'Segoe UI',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
 
-width:120px;
-height:120px;
+    background:
+    linear-gradient(
+        180deg,
+        #FFF8F0 0%,
+        #FCE4EC 50%,
+        #D6F5F3 100%
+    );
 
-border-radius:50%;
-
-background:#fff9d9;
-
-box-shadow:
-0 0 40px #fff5aa,
-0 0 80px #fff5aa;
-
-animation:floatMoon 5s ease-in-out infinite;
+    position:relative;
 }
 
-@keyframes floatMoon{
-50%{
-transform:translateY(-10px);
-}
-}
-.cloud{
-position:absolute;
-background:white;
-border-radius:100px;
-opacity:.8;
-}
+/* =========================
+   PANTALLAS
+========================= */
 
-.cloud::before,
-.cloud::after{
-content:'';
-position:absolute;
-background:white;
-border-radius:50%;
-}
+.screen{
+    display:none;
 
-.cloud1{
-width:140px;
-height:50px;
-top:100px;
-left:-200px;
-animation:cloudMove 35s linear infinite;
-}
+    min-height:100vh;
+    width:100%;
 
-.cloud2{
-width:180px;
-height:60px;
-top:250px;
-left:-250px;
-animation:cloudMove 50s linear infinite;
-}
+    padding:40px 20px;
 
-.cloud3{
-width:120px;
-height:40px;
-top:400px;
-left:-200px;
-animation:cloudMove 45s linear infinite;
-}
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
 
-@keyframes cloudMove{
-to{
-transform:translateX(140vw);
-}
-}
-.house{
-position:absolute;
-bottom:40px;
-left:40px;
-width:180px;
-height:130px;
-}
+    text-align:center;
 
-.roof{
-position:absolute;
-width:180px;
-height:50px;
-background:#cc3f3f;
-top:0;
-border-radius:20px 20px 0 0;
-}
-
-.body{
-position:absolute;
-bottom:0;
-width:180px;
-height:90px;
-background:#d84f4f;
-border-radius:0 0 20px 20px;
-}
-.bird{
-position:absolute;
-width:24px;
-height:24px;
-background:#ffe45c;
-border-radius:50%;
-animation:birdFloat 4s ease-in-out infinite;
-}
-
-.bird1{
-left:250px;
-bottom:220px;
-}
-
-.bird2{
-left:320px;
-bottom:270px;
-}
-
-.bird3{
-left:380px;
-bottom:230px;
-}
-
-@keyframes birdFloat{
-50%{
-transform:translateY(-15px);
-}
+    position:relative;
+    z-index:10;
 }
 
 .active{
-display:flex;
-animation:fadeUp .9s ease;
+    display:flex;
+    animation:fadeUp .8s ease;
 }
+
 @keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
-to{
-opacity:1;
-transform:translateY(0);
+
+/* =========================
+   TITULOS
+========================= */
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
 }
+
+h2{
+    font-size:2rem;
+    margin-bottom:20px;
 }
+
+p{
+    font-size:1.1rem;
+    margin-bottom:20px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
 button{
-padding:14px 28px;
-border:none;
-border-radius:40px;
 
-background:linear-gradient(
-135deg,
-#FFD6E0,
-#FFC1D6
-);
+    padding:14px 28px;
 
-font-weight:600;
-font-size:1rem;
+    border:none;
 
-cursor:pointer;
+    border-radius:40px;
 
-transition:.4s;
+    background:
+    linear-gradient(
+        135deg,
+        #FFD6E0,
+        #FFC1D6
+    );
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
 }
 
 button:hover{
-transform:
-translateY(-5px)
-scale(1.05);
 
-box-shadow:
-0 10px 30px rgba(255,120,180,.4);
+    transform:
+    translateY(-4px)
+    scale(1.03);
+
+    box-shadow:
+    0 12px 25px rgba(255,120,180,.35);
 }
+
+/* =========================
+   QUIZ
+========================= */
+
+.progress{
+    width:min(600px,90%);
+    height:16px;
+
+    background:#ffffff;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-bottom:20px;
+}
+
+#progressBar{
+
+    width:0%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ffd6e0,
+        #d6f5f3
+    );
+
+    transition:.4s;
+}
+
+#answers{
+
+    width:min(600px,90%);
+
+    display:grid;
+
+    gap:12px;
+}
+
+.answer{
+    width:100%;
+}
+
+/* =========================
+   CARTA
+========================= */
+
 .card{
-max-width:750px;
 
-background:
-rgba(255,255,255,.85);
+    max-width:800px;
 
-backdrop-filter:blur(15px);
+    background:
+    rgba(255,255,255,.85);
 
-padding:40px;
+    backdrop-filter:blur(10px);
 
-border-radius:30px;
+    padding:40px;
 
-line-height:1.8;
+    border-radius:30px;
 
-box-shadow:
-0 20px 60px rgba(0,0,0,.15);
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.12);
+
+    line-height:1.8;
+
+    white-space:pre-line;
 }
+
+/* =========================
+   COFRE
+========================= */
+
+.chest-box{
+
+    width:180px;
+    height:120px;
+
+    background:#d84f4f;
+
+    border-radius:0 0 20px 20px;
+
+    position:relative;
+
+    margin-bottom:30px;
+
+    animation:floatBox 3s ease-in-out infinite;
+}
+
+.chest-box::before{
+
+    content:'';
+
+    position:absolute;
+
+    top:-35px;
+    left:0;
+
+    width:180px;
+    height:40px;
+
+    background:#cc3f3f;
+
+    border-radius:20px 20px 0 0;
+}
+
+@keyframes floatBox{
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+/* =========================
+   BOTONES SI/NO
+========================= */
+
+.buttons{
+
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* =========================
+   FONDO DECORATIVO
+========================= */
+
+.sky{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    overflow:hidden;
+}
+
+/* =========================
+   LUNA
+========================= */
+
+.moon{
+
+    position:absolute;
+
+    right:80px;
+    top:80px;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:#fff7c8;
+
+    opacity:.6;
+
+    box-shadow:
+    0 0 40px #fff1a8;
+
+    animation:moonFloat 6s ease-in-out infinite;
+}
+
+@keyframes moonFloat{
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+/* =========================
+   NUBES
+========================= */
+
+.cloud{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:100px;
+
+    opacity:.45;
+
+    z-index:-2;
+}
+
+.cloud1{
+
+    width:140px;
+    height:50px;
+
+    top:120px;
+
+    left:-200px;
+
+    animation:cloudMove 35s linear infinite;
+}
+
+.cloud2{
+
+    width:180px;
+    height:60px;
+
+    top:260px;
+
+    left:-250px;
+
+    animation:cloudMove 50s linear infinite;
+}
+
+.cloud3{
+
+    width:120px;
+    height:40px;
+
+    top:420px;
+
+    left:-200px;
+
+    animation:cloudMove 45s linear infinite;
+}
+
+@keyframes cloudMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(140vw);
+    }
+
+}
+
+/* =========================
+   CASITA
+========================= */
+
+.house{
+
+    position:fixed;
+
+    left:40px;
+    bottom:40px;
+
+    width:120px;
+    height:90px;
+
+    opacity:.35;
+
+    z-index:-1;
+}
+
+.roof{
+
+    width:120px;
+    height:35px;
+
+    background:#cc3f3f;
+
+    border-radius:15px 15px 0 0;
+}
+
+.body{
+
+    width:120px;
+    height:55px;
+
+    background:#d84f4f;
+}
+
+/* =========================
+   PAJAROS
+========================= */
+
+.bird{
+    display:none;
+}
+
+/* =========================
+   CORAZONES
+========================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-20px;
+
+    pointer-events:none;
+
+    animation:riseHeart 6s linear forwards;
+}
+
 @keyframes riseHeart{
 
-to{
+    to{
 
-transform:
-translateY(-110vh)
-rotate(360deg);
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
 
-opacity:0;
+        opacity:0;
+    }
 
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+
+    .card{
+        padding:25px;
+    }
+
 }
