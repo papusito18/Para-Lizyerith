@@ -368,19 +368,18 @@ button:hover{
 
 .house{
 
-    position:fixed;
+position:fixed;
 
-    left:40px;
-    bottom:40px;
+left:40px;
+bottom:40px;
 
-    width:120px;
-    height:90px;
+width:170px;
+height:120px;
 
-    opacity:.35;
+opacity:.75;
 
-    z-index:-1;
+z-index:-1;
 }
-
 .roof{
 
     width:120px;
@@ -404,9 +403,41 @@ button:hover{
 ========================= */
 
 .bird{
-    display:none;
+
+position:absolute;
+
+width:20px;
+height:20px;
+
+background:#FFE44D;
+
+border-radius:50%;
+
+animation:birdFloat 4s ease-in-out infinite;
 }
 
+.bird1{
+left:260px;
+bottom:220px;
+}
+
+.bird2{
+left:320px;
+bottom:270px;
+}
+
+.bird3{
+left:380px;
+bottom:230px;
+}
+
+@keyframes birdFloat{
+
+50%{
+transform:translateY(-12px);
+}
+
+}
 /* =========================
    CORAZONES
 ========================= */
@@ -452,5 +483,28 @@ button:hover{
     .card{
         padding:25px;
     }
+
+}
+body{
+
+background:
+linear-gradient(
+180deg,
+#BFE9FF,
+#DDF5FF,
+#F6FCFF
+);
+
+transition:1.2s;
+}
+.romantic-mode{
+
+background:
+linear-gradient(
+180deg,
+#FFE3EC,
+#FFD6E0,
+#FCE4EC
+);
 
 }
