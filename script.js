@@ -116,12 +116,14 @@ s.remove();
 
 setTimeout(()=>{
 
-show("reveal");
+show("truth");
 
 },1800);
+document.getElementById("continueTruth").onclick = () => {
+
+    show("reveal");
 
 };
-
 document.getElementById("continue2").onclick = () => {
 
     romanticMode = true;
