@@ -86,44 +86,47 @@ document.getElementById("chestBtn").onclick = () => {
 
 document.getElementById("continue1").onclick = () => {
 
-const chest =
-document.querySelector(".chest-box");
+    const chest =
+    document.querySelector(".chest-box");
 
-chest.classList.add("open");
+    chest.classList.add("open");
 
-for(let i=0;i<35;i++){
+    for(let i=0;i<35;i++){
 
-setTimeout(()=>{
+        setTimeout(()=>{
 
-const s =
-document.createElement("div");
+            const s =
+            document.createElement("div");
 
-s.className="sparkle";
+            s.className="sparkle";
 
-s.style.left =
-(40 + Math.random()*20)+"vw";
+            s.style.left =
+            (40 + Math.random()*20)+"vw";
 
-s.style.bottom="220px";
+            s.style.bottom="220px";
 
-document.body.appendChild(s);
+            document.body.appendChild(s);
 
-setTimeout(()=>{
-s.remove();
-},2000);
+            setTimeout(()=>{
+                s.remove();
+            },2000);
 
-},i*40);
-}
+        },i*40);
+    }
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-show("truth");
+        show("truth");
 
-},1800);
+    },1800);
+
+}; 
 document.getElementById("continueTruth").onclick = () => {
 
     show("reveal");
 
 };
+
 document.getElementById("continue2").onclick = () => {
 
     romanticMode = true;
@@ -131,6 +134,7 @@ document.getElementById("continue2").onclick = () => {
     document.body.classList.add("romantic-mode");
 
     show("proposal");
+
 };
 document.getElementById("yesBtn").onclick = () => {
 
