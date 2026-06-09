@@ -531,6 +531,10 @@ transform:translateY(-12px);
 }
 
 @keyframes riseHeart{
+     from{
+        transform:translateY(0);
+        opacity:1;
+    }
 
     to{
 
