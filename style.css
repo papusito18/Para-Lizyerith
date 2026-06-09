@@ -658,7 +658,7 @@ background:#795548;
 
 margin:auto;
 }
-.snoopy-img{
+.snooppy-img{
 
 position:fixed;
 
@@ -669,7 +669,7 @@ width:220px;
 
 z-index:3;
 
-animation:snoopyFloat 4s ease-in-out infinite;
+animation:snooppyFloat 4s ease-in-out infinite;
 
 filter:
 drop-shadow(
@@ -677,7 +677,7 @@ drop-shadow(
 );
 }
 
-@keyframes snoopyFloat{
+@keyframes snooppyFloat{
 
 50%{
 transform:translateY(-8px);
