@@ -199,7 +199,9 @@ if(!romanticMode) return;
 const heart = document.createElement("div");
 
 heart.innerHTML = "❤️";
-heart.style.color = "red";
+heart.style.color = "#ff2b55";
+    heart.style.textShadow =
+    "0 0 10px #ff2b55";
 heart.style.position = "fixed";
 heart.style.left = Math.random()*100 + "vw";
 heart.style.bottom = "-20px";
