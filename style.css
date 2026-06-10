@@ -677,31 +677,23 @@ background:#795548;
 
 margin:auto;
 }
-.snooppy-img{
+.Snooppy-img{
 
 position:fixed;
 
-left:90px;
-bottom:120px;
+left:260px;
+bottom:40px;
 
 width:220px;
 
 z-index:3;
 
-animation:snooppyFloat 4s ease-in-out infinite;
+animation:SnooppyFloat 4s ease-in-out infinite;
 
 filter:
 drop-shadow(
 0 8px 10px rgba(0,0,0,.15)
 );
-}
-
-@keyframes snooppyFloat{
-
-50%{
-transform:translateY(-8px);
-}
-
 }
 .romantic-mode .tree,
 .romantic-mode .house{
@@ -709,4 +701,48 @@ transform:translateY(-8px);
 opacity:0.2;
 
 transition:1s;
+}
+.romantic-mode .flower{
+    opacity:.8;
+}
+.flower{
+    position:fixed;
+    font-size:35px;
+    opacity:0;
+    pointer-events:none;
+    animation:flowerFloat 8s ease-in-out infinite;
+    transition:1.5s;
+}
+.flower1{
+
+left:20%;
+top:120px;
+}
+
+.flower2{
+
+left:50%;
+top:80px;
+}
+
+.flower3{
+
+left:80%;
+top:150px;
+}
+
+@keyframes flowerFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
 }
