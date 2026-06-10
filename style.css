@@ -589,6 +589,21 @@ linear-gradient(
 );
 
 }
+.romantic-mode .ground{
+    opacity:0;
+}
+
+.romantic-mode .tree{
+    opacity:0;
+}
+
+.romantic-mode .house{
+    opacity:0;
+}
+
+.romantic-mode .snooppy-img{
+    opacity:1;
+}
 .ground{
 
 position:fixed;
